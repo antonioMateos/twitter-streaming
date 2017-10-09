@@ -1,7 +1,7 @@
 {
-  "name": "talent-tools-sept",
+  "name": "Twitter Stream",
   "version": "1.0.0",
-  "description": "A basic Sass/Scss watcher, concat and compiler for Front End Developing",
+  "description": "Twitter streaming webapp that includes a basic Sass/Scss watcher, concat and compiler for Front End Developing",
   "main": "index.js",
   "scripts": {
     "serve": "gulp"
