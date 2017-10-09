@@ -1,5 +1,5 @@
 {
-  "name": "Twitter Stream",
+  "name": "TwitterStream",
   "version": "1.0.0",
   "description": "Twitter streaming webapp that includes a basic Sass/Scss watcher, concat and compiler for Front End Developing",
   "main": "index.js",
