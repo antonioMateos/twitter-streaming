@@ -1,0 +1,33 @@
+{
+  "name": "talent-tools-sept",
+  "version": "1.0.0",
+  "description": "A basic Sass/Scss watcher, concat and compiler for Front End Developing",
+  "main": "index.js",
+  "scripts": {
+    "serve": "gulp"
+  },
+  "keywords": [
+    "Sass",
+    "Scss",
+    "Watcher",
+    "Compiler"
+  ],
+  "author": "Grahovsky",
+  "license": "ISC",
+  "devDependencies": {
+    "browser-sync": "2.18.8",
+    "gulp": "3.9.1",
+    "gulp-autoprefixer": "3.1.1",
+    "gulp-concat": "2.6.1",
+    "gulp-sass": "3.1.0",
+    "gulp-uncss": "1.0.6",
+    "gulp-nodemon": "^2.2.1"
+  },
+  "dependencies": {
+    "express": "^4.16.1",
+    "scheduled": "^0.5.0",
+    "socket.io": "^2.0.3",
+    "twitter": "^1.7.1",
+    "body-parser": "^1.17.1"
+  }
+}

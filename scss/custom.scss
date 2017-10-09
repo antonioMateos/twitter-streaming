@@ -1,0 +1,128 @@
+//RESET
+@import "reset";
+//COLORS
+@import 'colors';
+//MATERIAL RESET
+@import 'material-reset';
+
+/* CUSTOM STYLES */
+.main-background {
+	background: url('../images/bg-01.jpg') no-repeat right 60px fixed; 
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+}
+
+.main {
+	width: 100%;
+	height: 100vh;
+}
+
+body {
+	background: $white;
+}
+
+nav {
+	background: $l-primary;
+}
+
+main {
+
+	.title {
+		font-size: 1.5em;
+		border-bottom: 3px solid rgba($gray,0.2);
+		font-weight: $fw-bold;
+		padding: .75rem;
+		color: $primary;
+		margin-bottom: 0;
+		margin-top: 0;
+
+		span {
+			color: $l-secondary;
+		}
+
+	}
+
+	.twitterStream {
+
+		height: calc(100vh - 350px);
+		overflow: hidden;
+		overflow-y: auto;
+		padding-bottom: $s !important;
+		margin-top: 0 !important;
+		padding-top: 0  !important;
+
+		ul {
+
+			li {
+
+				padding: $s;
+				border-bottom: 1px dotted $l-primary;
+
+				&:nth-child(2n-1) {
+					background: rgba($black,0.05);
+				}
+
+			}
+
+		}
+
+	}
+
+}
+
+/* END CUSTOM STYLES */
+
+
+/* MEDIA QUERIES */
+
+/*w 1140*/
+@media (max-width: 71.25em) {
+
+}
+
+/*w 992*/
+@media (max-width: 62em) {
+
+}
+
+/*w 900*/
+@media (max-width: 56.25em) {
+
+}
+
+/*w 800*/
+@media (max-width: 50em) {
+
+}
+
+/*w 768*/
+@media (max-width: 48em) {
+
+}
+
+/*w 640*/
+@media (max-width: 40em) {
+
+}
+
+/*w 600*/
+@media (max-width: 37.5em) {
+
+}
+
+/*w 540*/
+@media (max-width: 33.75em) {
+
+}
+
+/*w 480*/
+@media (max-width: 30em) {
+
+}
+
+/*w 380*/
+@media (max-width: 23.75em) {
+
+}

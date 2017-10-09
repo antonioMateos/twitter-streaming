@@ -1,0 +1,358 @@
+/*GRAHOVSKY RESET*/
+*, *:before, *:after {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box !important;
+  -moz-box-sizing: border-box !important;
+  -ms-box-sizing: border-box !important;
+  box-sizing: border-box !important;
+}
+
+a {
+  text-decoration: none;
+  outline: none;
+}
+
+img {
+  border-style: none;
+  outline: none;
+}
+
+i.fa, i.fa:before, i.fa:after {
+  font-family: 'fontawesome';
+}
+
+a, a:hover, button, button:hover, .ease {
+  transition: all 0.5s ease;
+}
+
+.clearfix {
+  height: 1px;
+  margin-bottom: -1px;
+  width: 100%;
+  clear: both;
+}
+
+/*END RESET*/
+/*VARIABLES*/
+/*MARGINS*/
+.mvxl {
+  margin-top: 90px;
+  margin-bottom: 90px;
+}
+
+.mvl {
+  margin-top: 60px;
+  margin-bottom: 60px;
+}
+
+.mvm {
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+.mvsm {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.mvs {
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+.mtxl {
+  margin-top: 90px;
+}
+
+.mtl {
+  margin-top: 60px;
+}
+
+.mtm {
+  margin-top: 30px;
+}
+
+.mtsm {
+  margin-top: 20px;
+}
+
+.mts {
+  margin-top: 15px;
+}
+
+.mbxl {
+  margin-bottom: 90px;
+}
+
+.mbl {
+  margin-bottom: 60px;
+}
+
+.mbm {
+  margin-bottom: 30px;
+}
+
+.mbsm {
+  margin-bottom: 20px;
+}
+
+.mbs {
+  margin-bottom: 15px;
+}
+
+.mlxl {
+  margin-left: 90px;
+}
+
+.mll {
+  margin-left: 60px;
+}
+
+.mlm {
+  margin-left: 30px;
+}
+
+.mlsm {
+  margin-left: 20px;
+}
+
+.mls {
+  margin-left: 15px;
+}
+
+/*PADDINGS*/
+.pvxl {
+  padding-top: 90px;
+  padding-bottom: 90px;
+}
+
+.pvl {
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+
+.pvm {
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+.pvs {
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+
+.ptxl {
+  padding-top: 90px;
+}
+
+.ptl {
+  padding-top: 60px;
+}
+
+.ptm {
+  padding-top: 30px;
+}
+
+.pts {
+  padding-top: 15px;
+}
+
+.pbxl {
+  padding-bottom: 90px;
+}
+
+.pbl {
+  padding-bottom: 60px;
+}
+
+.pbm {
+  padding-bottom: 30px;
+}
+
+.pbs {
+  padding-bottom: 15px;
+}
+
+/* FONTS */
+/* END FONTS */
+/*BOOTSTRAP RESETS*/
+/*1200w*/
+@media (min-width: 75em) {
+  .container {
+    max-width: 1200px;
+  }
+}
+
+.container-full-w {
+  width: 100%;
+  min-width: none;
+  max-width: none;
+  padding: 0 40px;
+}
+
+/*VERTICAL ALIGNER*/
+.v-aligner {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+}
+
+.equal-height {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  /* ADD TO CHILD YOU WANT 
+  .card {
+    height: 100%;
+  }
+  */
+}
+
+/*END VARIABLES*/
+/*ANIMATIONS*/
+.ani-show {
+  -ms-transform: scale(1, 1);
+  /* IE 9 */
+  -webkit-transform: scale(1, 1);
+  /* Safari */
+  transform: scale(1, 1);
+}
+
+.ani-grow-l:hover {
+  -ms-transform: scale(1.5, 1.5);
+  /* IE 9 */
+  -webkit-transform: scale(1.5, 1.5);
+  /* Safari */
+  transform: scale(1.5, 1.5);
+  transition: all 0.5s ease;
+}
+
+.ani-grow-m:hover {
+  -ms-transform: scale(1.2, 1.2);
+  /* IE 9 */
+  -webkit-transform: scale(1.2, 1.2);
+  /* Safari */
+  transform: scale(1.2, 1.2);
+  transition: all 0.3s ease-in-out;
+}
+
+.ani-move-down:hover {
+  -ms-transform: translate(0, 15px);
+  /* IE 9 */
+  -webkit-transform: translate(0, 15px);
+  /* Safari */
+  transform: translate(0, 15px);
+}
+
+.ani-move-right:hover {
+  -ms-transform: translate(5px, 0px);
+  /* IE 9 */
+  -webkit-transform: translate(5px, 0px);
+  /* Safari */
+  transform: translate(5px, 0px);
+}
+
+/*w 1140*/
+/*w 992*/
+@media (max-width: 62em) {
+  .sm-mvm {
+    margin-top: 30px;
+    margin-bottom: 30px;
+  }
+  .sm-mtm {
+    margin-top: 30px;
+  }
+  .sm-mts {
+    margin-top: 15px;
+  }
+  .sm-mbm {
+    margin-bottom: 30px;
+  }
+}
+
+/*w 900*/
+/*w 800*/
+/*w 768*/
+/*w 640*/
+/*w 600*/
+/*w 540*/
+/*w 480*/
+/*w 380*/
+/*COLORS*/
+/*END COLORS*/
+/* MATERIAL DESIGN RESET */
+/* CUSTOM STYLES */
+.main-background {
+  background: url("../images/bg-01.jpg") no-repeat right 60px fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.main {
+  width: 100%;
+  height: 100vh;
+}
+
+body {
+  background: #fff;
+}
+
+nav {
+  background: #006995;
+}
+
+main .title {
+  font-size: 1.5em;
+  border-bottom: 3px solid rgba(76, 76, 76, 0.2);
+  font-weight: bold;
+  padding: .75rem;
+  color: #003E58;
+  margin-bottom: 0;
+  margin-top: 0;
+}
+
+main .title span {
+  color: #009191;
+}
+
+main .twitterStream {
+  height: calc(100vh - 350px);
+  overflow: hidden;
+  overflow-y: auto;
+  padding-bottom: 15px !important;
+  margin-top: 0 !important;
+  padding-top: 0  !important;
+}
+
+main .twitterStream ul li {
+  padding: 15px;
+  border-bottom: 1px dotted #006995;
+}
+
+main .twitterStream ul li:nth-child(2n-1) {
+  background: rgba(30, 30, 30, 0.05);
+}
+
+/* END CUSTOM STYLES */
+/* MEDIA QUERIES */
+/*w 1140*/
+/*w 992*/
+/*w 900*/
+/*w 800*/
+/*w 768*/
+/*w 640*/
+/*w 600*/
+/*w 540*/
+/*w 480*/
+/*w 380*/

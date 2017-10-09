@@ -1,0 +1,308 @@
+/*GRAHOVSKY RESET*/
+*, *:before, *:after {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box !important;
+  -moz-box-sizing: border-box !important;
+  -ms-box-sizing: border-box !important;
+  box-sizing: border-box !important;
+}
+
+a {
+  text-decoration: none;
+  outline: none; }
+
+img {
+  border-style: none;
+  outline: none; }
+
+i.fa, i.fa:before, i.fa:after {
+  font-family: 'fontawesome'; }
+
+a, a:hover, button, button:hover, .ease {
+  transition: all 0.5s ease;
+}
+
+.clearfix {
+  height: 1px;
+  margin-bottom: -1px;
+  width: 100%;
+  clear: both;
+}
+
+/*END RESET*/
+/*VARIABLES*/
+$xl:90px;
+$l:60px;
+$m:30px;
+$sm:20px;
+$s:15px;
+/*MARGINS*/
+.mvxl {
+  margin-top: $xl;
+  margin-bottom: $xl; }
+
+.mvl {
+  margin-top: $l;
+  margin-bottom: $l; }
+
+.mvm {
+  margin-top: $m;
+  margin-bottom: $m; }
+
+.mvsm {
+  margin-top: $sm;
+  margin-bottom: $sm; }
+
+.mvs {
+  margin-top: $s;
+  margin-bottom: $s; }
+
+.mtxl {
+  margin-top: $xl; }
+
+.mtl {
+  margin-top: $l; }
+
+.mtm {
+  margin-top: $m; }
+
+.mtsm {
+  margin-top: $sm; }
+
+.mts {
+  margin-top: $s; }
+
+.mbxl {
+  margin-bottom: $xl; }
+
+.mbl {
+  margin-bottom: $l; }
+
+.mbm {
+  margin-bottom: $m; }
+
+.mbsm {
+  margin-bottom: $sm; }
+
+.mbs {
+  margin-bottom: $s; }
+
+.mlxl {
+  margin-left: $xl; }
+
+.mll {
+  margin-left: $l; }
+
+.mlm {
+  margin-left: $m; }
+
+.mlsm {
+  margin-left: $sm; }
+
+.mls {
+  margin-left: $s; }
+
+/*PADDINGS*/
+.pvxl {
+  padding-top: $xl;
+  padding-bottom: $xl; }
+
+.pvl {
+  padding-top: $l;
+  padding-bottom: $l; }
+
+.pvm {
+  padding-top: $m;
+  padding-bottom: $m; }
+
+.pvs {
+  padding-top: $s;
+  padding-bottom: $s; }
+
+.ptxl {
+  padding-top: $xl; }
+
+.ptl {
+  padding-top: $l; }
+
+.ptm {
+  padding-top: $m; }
+
+.pts {
+  padding-top: $s; }
+
+.pbxl {
+  padding-bottom: $xl; }
+
+.pbl {
+  padding-bottom: $l; }
+
+.pbm {
+  padding-bottom: $m; }
+
+.pbs {
+  padding-bottom: $s; }
+
+/* FONTS */
+//FONT WEIGHT
+$fw-bold: bold;
+$fw-medium: 600;
+$fw-strong: 700;
+
+//FONT SIZE
+$font9: 9px;
+$font10: 10px;
+$font11: 11px;
+$font12: 12px;
+$font14: 14px;
+$font16: 16px;
+$font18: 18px;
+$font24: 24px;
+$font32: 32px;
+/* END FONTS */
+
+/*BOOTSTRAP RESETS*/
+/*1200w*/
+@media (min-width: 75em) {
+  .container {
+    max-width: 1200px; } }
+.container-full-w {
+  width: 100%;
+  min-width: none;
+  max-width: none;
+  padding: 0 40px; }
+
+/*VERTICAL ALIGNER*/
+.v-aligner {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+}
+
+.equal-height {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+
+  /* ADD TO CHILD YOU WANT 
+  .card {
+    height: 100%;
+  }
+  */
+
+}
+
+/*END VARIABLES*/
+/*ANIMATIONS*/
+.ani-show {
+  -ms-transform: scale(1, 1);
+  /* IE 9 */
+  -webkit-transform: scale(1, 1);
+  /* Safari */
+  transform: scale(1, 1); }
+
+.ani-grow-l:hover {
+  -ms-transform: scale(1.5, 1.5);
+  /* IE 9 */
+  -webkit-transform: scale(1.5, 1.5);
+  /* Safari */
+  transform: scale(1.5, 1.5);
+  transition: all 0.5s ease; }
+
+.ani-grow-m:hover {
+  -ms-transform: scale(1.2, 1.2);
+  /* IE 9 */
+  -webkit-transform: scale(1.2, 1.2);
+  /* Safari */
+  transform: scale(1.2, 1.2);
+  transition: all 0.3s ease-in-out; }
+
+.ani-move-down:hover {
+  -ms-transform: translate(0, $s);
+  /* IE 9 */
+  -webkit-transform: translate(0, $s);
+  /* Safari */
+  transform: translate(0, $s); }
+
+.ani-move-right:hover {
+  -ms-transform: translate(5px, 0px);
+  /* IE 9 */
+  -webkit-transform: translate(5px, 0px);
+  /* Safari */
+  transform: translate(5px, 0px); }
+
+/*w 1140*/
+@media (max-width: 71.25em) {
+
+}
+
+/*w 992*/
+@media (max-width: 62em) {
+
+  .sm-mvm {
+    margin-top: 30px;
+    margin-bottom: 30px;
+  }
+
+  .sm-mtm {
+    margin-top: 30px;
+  }
+
+  .sm-mts {
+    margin-top: 15px;
+  }
+
+  .sm-mbm {
+    margin-bottom: 30px;
+  }
+
+}
+
+/*w 900*/
+@media (max-width: 56.25em) {
+
+}
+
+/*w 800*/
+@media (max-width: 50em) {
+
+}
+
+/*w 768*/
+@media (max-width: 48em) {
+
+}
+
+/*w 640*/
+@media (max-width: 40em) {
+
+}
+
+/*w 600*/
+@media (max-width: 37.5em) {
+
+}
+
+/*w 540*/
+@media (max-width: 33.75em) {
+
+}
+
+/*w 480*/
+@media (max-width: 30em) {
+
+}
+
+/*w 380*/
+@media (max-width: 23.75em) {
+
+}
