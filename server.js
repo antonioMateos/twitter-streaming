@@ -54,14 +54,22 @@ console.log('- - - - SOCKET IO');
 
 io.on('connection', function(socket){
 
+  //START CONNECTION
+  var msg = 'Sockets ON';
+  socket.emit('connect',function(msg){
+    console.log(msg);
+  });
+
+  var hashtag;
+  var clientStream; // TO DESTROY CONNECTION
+
   //Hashtag from front
   socket.on('start',function(data){
 
-    var hashtag = data;
+    hashtag = data;
     //console.log("#"+hashtag);
 
     //TWITTER STREAM API
-    //var twStream = require('./stream');
     var stream = client.stream('statuses/filter', {track: hashtag});
 
     stream.on('data', function(event) {
@@ -69,24 +77,20 @@ io.on('connection', function(socket){
       socket.emit('tweet',event);
     });
 
-    stream.on('error', function(error) {
-      throw error;
-    });
-
-    // You can also get the stream in a callback if you prefer.
-    /*
-    client.stream('statuses/filter', {track: 'javascript'}, function(stream) {
-    stream.on('data', function(event) {
-      console.log(event && event.text);
-    });
+    clientStream = stream;
 
     stream.on('error', function(error) {
       throw error;
     });
-    });
-    */
     //END TWITTER STREAM API
 
+  });
+
+  //STOP STREAMING
+  socket.on('stop',function(){
+    // DESTROY TW STREAM CONNECTION
+    clientStream.destroy();
+    console.log("- - - - STOP Streaming - - - -");
   });
   
   // STANDARD SOCKETS

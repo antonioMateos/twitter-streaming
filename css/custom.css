@@ -312,6 +312,14 @@ nav {
   background: #006995;
 }
 
+main .btn-start {
+  display: block;
+}
+
+main .btn-stop {
+  display: none;
+}
+
 main .title {
   font-size: 1.5em;
   border-bottom: 3px solid rgba(76, 76, 76, 0.2);
@@ -342,6 +350,45 @@ main .twitterStream ul li {
 
 main .twitterStream ul li:nth-child(2n-1) {
   background: rgba(30, 30, 30, 0.05);
+}
+
+main .twitterStream ul li .user-img {
+  border-radius: 50%;
+  float: left;
+  width: 48px;
+  height: 48px;
+  overflow: hidden;
+}
+
+main .twitterStream ul li .user-info {
+  width: calc(100% - 58px);
+  margin-left: 10px;
+  float: left;
+  display: inline-block;
+  font-size: 1em;
+}
+
+main .twitterStream ul li .user-info h4 {
+  font-size: 1em;
+  color: #4c4c4c;
+  margin-top: 0;
+}
+
+main .twitterStream ul li .user-info .user-name {
+  font-weight: bold;
+  color: #003E58;
+}
+
+main .twitterStream ul li .user-info .tw-time {
+  color: #C6C6C6;
+}
+
+main.streaming .btn-start {
+  display: none;
+}
+
+main.streaming .btn-stop {
+  display: block;
 }
 
 /* END CUSTOM STYLES */

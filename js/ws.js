@@ -8,20 +8,34 @@ socket.on("connect", function(msg){
 
 socket.on("tweet", function(newTw){
 
-  console.log(newTw);
-  var tw = "<li>"+newTw+"</li>"; // TO DO --> create template for correct display of tweets
-  $('#tweetList').prepend(tw);
+  //console.log(newTw);
+  var tw = newTw;
+  /* TW TEMPLATE */
+  var tweet = '<li>'+
+  	'<div class="user-img">'+
+  		'<img src='+tw.user.profile_image_url_https+' />'+
+  	'</div>'+
+  	'<div class="user-info">'+
+	  	'<h4><span class="user-name">'+tw.user.screen_name+'</span> <span class="user-handle">@'+tw.user.screen_name+'</span> <span class="tw-time">'+tw.user.created_at+'</span></h4>'+
+	  	'<p class="tw-content">'+tw.text+'</p>'+
+	'</div>'+
+	'<div class="clearfix"></div>'+
+  '</li>';
+
+  $('#tweetList').prepend(tweet);
 
 });
 
-$('#track-btn').click(function(){
+// TO DO --> Add key press font intro on search!!!
 
-	cleanTwList(); // <-- Clean tweetList
+$('#start-btn').click(function(){
 
 	var hashtag = $('#track-term').val(); // <-- Get input value
 	// TO DO --> Fix text for correct search
 
 	if(hashtag!=""){
+		cleanTwList(); // <-- Clean tweetList
+		$('main').addClass('streaming'); // CHANGE STYLE TO STOP STREAMING
 		$('#hashtag').text("#"+hashtag); // <-- Write tracked hashtag in title
 		socket.emit('start',hashtag); // <-- Socket emit hashtag to server
 		//console.log('HS = ',hashtag);
@@ -29,8 +43,12 @@ $('#track-btn').click(function(){
 		//TO DO --> "Please, write a hashtag to begin with"
 	}
 
-	// TO DO --> Change text and style in button to "STOP Streaming"
+});
 
+$('#stop-btn').click(function(){
+	$('#track-term').val("");
+	socket.emit('stop');
+	$('main').removeClass('streaming'); // CHANGE STYLE TO START STREAMING
 });
 
 function cleanTwList() {

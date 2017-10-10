@@ -29,6 +29,9 @@ nav {
 
 main {
 
+	.btn-start {display: block;}
+	.btn-stop {display: none;}
+
 	.title {
 		font-size: 1.5em;
 		border-bottom: 3px solid rgba($gray,0.2);
@@ -64,9 +67,43 @@ main {
 					background: rgba($black,0.05);
 				}
 
+				.user-img {
+					border-radius: 50%;
+					float: left;
+					width:48px;
+					height: 48px;
+					overflow: hidden;
+				}
+
+				.user-info {
+					width: calc(100% - 58px);
+					margin-left: 10px;
+					float: left;
+					display: inline-block;
+					font-size: 1em;
+
+					h4 {font-size: 1em;color: $gray;margin-top: 0;}
+
+					.user-name {font-weight: $fw-bold;color: $primary;}
+
+					.user-handle {}
+
+					.tw-time {color: $l-gray;}
+
+					.tw-content {}
+
+				}
+
 			}
 
 		}
+
+	}
+
+	&.streaming {
+
+		.btn-start {display: none;}
+		.btn-stop {display: block;}
 
 	}
 
