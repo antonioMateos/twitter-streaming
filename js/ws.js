@@ -24,23 +24,32 @@ socket.on("tweet", function(newTw){
 
   $('#tweetList').prepend(tweet);
 
+  //STATS
+  stats();
+
 });
 
+// START <> STOP Streaming
 // TO DO --> Add key press font intro on search!!!
-
 $('#start-btn').click(function(){
 
 	var hashtag = $('#track-term').val(); // <-- Get input value
 	// TO DO --> Fix text for correct search
 
 	if(hashtag!=""){
+
+		$('.stats').hide(); // STATS to initial state
 		cleanTwList(); // <-- Clean tweetList
 		$('main').addClass('streaming'); // CHANGE STYLE TO STOP STREAMING
+		$('#hashtag').show();
 		$('#hashtag').text("#"+hashtag); // <-- Write tracked hashtag in title
 		socket.emit('start',hashtag); // <-- Socket emit hashtag to server
-		//console.log('HS = ',hashtag);
+		responseMsg("start");
+
 	} else {
-		//TO DO --> "Please, write a hashtag to begin with"
+
+		responseMsg("empty");
+
 	}
 
 });
@@ -49,11 +58,54 @@ $('#stop-btn').click(function(){
 	$('#track-term').val("");
 	socket.emit('stop');
 	$('main').removeClass('streaming'); // CHANGE STYLE TO START STREAMING
+	responseMsg("stop");
 });
 
-function cleanTwList() {
+// STATS Fn
+var nt = 0; // Number of tweets received
+function stats() {
+	$('.stats').show(); // show STATS
+	nt += 1;
+	$('.stats p span').text(nt);
+}
 
-	//Refresh ul tweetList
-	$('#tweetList').html("");
+// RESPONSE MSGs
+function responseMsg(response) {
+
+	// Toast Config
+	var resp;
+	var className = "response-msg";
+
+	var msg = {
+		empty: "Please, write a term!!!",
+		stop: "Twitter stream stopped!",
+		start: "Twitter stream started!"
+	};
+
+	if(response=="empty") {
+		resp = msg.empty;
+		className += " error";
+	}
+
+	if(response=="stop") {
+		resp = msg.stop;
+		className += " stop";
+	}
+
+	if(response=="start") {
+		resp = msg.start;
+		className += " success";
+	}
+
+	// Materialize.toast(message, displayLength, className, completeCallback);
+	var toastContent = "<span>"+resp+"</span>";
+	var time = 4000;
+	Materialize.toast(toastContent, time, className); // 4000 is the duration of the toast
 
 }
+
+// REFRESH Tw List
+function cleanTwList() {
+	//Refresh ul tweetList
+	$('#tweetList').html("");
+};

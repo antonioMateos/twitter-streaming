@@ -32,9 +32,25 @@ main {
 	.btn-start {display: block;}
 	.btn-stop {display: none;}
 
+	height: calc(100vh - 65px);
+	background-color: rgba($l-gray,0.5);
+	padding-top: $m;
+
+	input.term-input {
+		font-size: 1.5em !important;
+	}
+
+	.container {
+		padding-left: .75rem;
+		padding-right: .75rem;
+		background-color: $white;
+		padding-bottom: 5px;
+		border-radius: 2px;
+		border:1px solid lighten($l-gray,8%);
+	}
+
 	.title {
 		font-size: 1.5em;
-		border-bottom: 3px solid rgba($gray,0.2);
 		font-weight: $fw-bold;
 		padding: .75rem;
 		color: $primary;
@@ -43,16 +59,47 @@ main {
 
 		span {
 			color: $l-secondary;
+			background-color: rgba($l-gray,0.5);
+			border-radius: 3px;
+			padding-left: .5rem;
+			padding-right: .5rem;
+		}
+
+	}
+
+	.stats {
+
+		p {
+			padding: .75rem;
+			span {
+				font-size: 1.5em;
+				font-weight: $fw-bold;
+				color: lighten($l-primary,15%);
+				&:hover {
+					cursor: pointer;
+				}
+				&:before {
+					display: inline;
+					content: "\f099";
+					font-family: "Fontawesome";
+					color: $l-primary;
+					width: 30px;
+					height: 30px;
+					position: relative;
+					font-size: 1em;
+					margin-right: 2px;
+				}
+			}
 		}
 
 	}
 
 	.twitterStream {
 
-		height: calc(100vh - 350px);
+		height: calc(100vh - 330px);
 		overflow: hidden;
 		overflow-y: auto;
-		padding-bottom: $s !important;
+		padding-bottom: 0 !important;
 		margin-top: 0 !important;
 		padding-top: 0  !important;
 
@@ -61,10 +108,9 @@ main {
 			li {
 
 				padding: $s;
-				border-bottom: 1px dotted $l-primary;
 
 				&:nth-child(2n-1) {
-					background: rgba($black,0.05);
+					background: rgba($black,0.07);
 				}
 
 				.user-img {
@@ -82,13 +128,13 @@ main {
 					display: inline-block;
 					font-size: 1em;
 
-					h4 {font-size: 1em;color: $gray;margin-top: 0;}
+					h4 {font-size: 1em;color: $d-gray;margin-top: 0;}
 
 					.user-name {font-weight: $fw-bold;color: $primary;}
 
 					.user-handle {}
 
-					.tw-time {color: $l-gray;}
+					.tw-time {color: darken($l-gray,20%);}
 
 					.tw-content {}
 
@@ -105,6 +151,27 @@ main {
 		.btn-start {display: none;}
 		.btn-stop {display: block;}
 
+	}
+
+}
+
+//TOAST CUSTOMIZE
+.response-msg {
+
+	color: $white;
+	background-color: lighten($l-primary,15%);
+	padding: .48rem .75rem;
+	font-weight: $fw-bold;
+
+	&.error {
+		background-color: $warning;
+	}
+
+	&.success {
+		background-color: $l-secondary;
+	}
+
+	&.stop {
 	}
 
 }

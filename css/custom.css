@@ -312,6 +312,12 @@ nav {
   background: #006995;
 }
 
+main {
+  height: calc(100vh - 65px);
+  background-color: rgba(198, 198, 198, 0.5);
+  padding-top: 30px;
+}
+
 main .btn-start {
   display: block;
 }
@@ -320,9 +326,21 @@ main .btn-stop {
   display: none;
 }
 
+main input.term-input {
+  font-size: 1.5em !important;
+}
+
+main .container {
+  padding-left: .75rem;
+  padding-right: .75rem;
+  background-color: #fff;
+  padding-bottom: 5px;
+  border-radius: 2px;
+  border: 1px solid #dadada;
+}
+
 main .title {
   font-size: 1.5em;
-  border-bottom: 3px solid rgba(76, 76, 76, 0.2);
   font-weight: bold;
   padding: .75rem;
   color: #003E58;
@@ -332,24 +350,53 @@ main .title {
 
 main .title span {
   color: #009191;
+  background-color: rgba(198, 198, 198, 0.5);
+  border-radius: 3px;
+  padding-left: .5rem;
+  padding-right: .5rem;
+}
+
+main .stats p {
+  padding: .75rem;
+}
+
+main .stats p span {
+  font-size: 1.5em;
+  font-weight: bold;
+  color: #009fe2;
+}
+
+main .stats p span:hover {
+  cursor: pointer;
+}
+
+main .stats p span:before {
+  display: inline;
+  content: "\f099";
+  font-family: "Fontawesome";
+  color: #006995;
+  width: 30px;
+  height: 30px;
+  position: relative;
+  font-size: 1em;
+  margin-right: 2px;
 }
 
 main .twitterStream {
-  height: calc(100vh - 350px);
+  height: calc(100vh - 330px);
   overflow: hidden;
   overflow-y: auto;
-  padding-bottom: 15px !important;
+  padding-bottom: 0 !important;
   margin-top: 0 !important;
   padding-top: 0  !important;
 }
 
 main .twitterStream ul li {
   padding: 15px;
-  border-bottom: 1px dotted #006995;
 }
 
 main .twitterStream ul li:nth-child(2n-1) {
-  background: rgba(30, 30, 30, 0.05);
+  background: rgba(30, 30, 30, 0.07);
 }
 
 main .twitterStream ul li .user-img {
@@ -370,7 +417,7 @@ main .twitterStream ul li .user-info {
 
 main .twitterStream ul li .user-info h4 {
   font-size: 1em;
-  color: #4c4c4c;
+  color: #3f3f3f;
   margin-top: 0;
 }
 
@@ -380,7 +427,7 @@ main .twitterStream ul li .user-info .user-name {
 }
 
 main .twitterStream ul li .user-info .tw-time {
-  color: #C6C6C6;
+  color: #939393;
 }
 
 main.streaming .btn-start {
@@ -389,6 +436,21 @@ main.streaming .btn-start {
 
 main.streaming .btn-stop {
   display: block;
+}
+
+.response-msg {
+  color: #fff;
+  background-color: #009fe2;
+  padding: .48rem .75rem;
+  font-weight: bold;
+}
+
+.response-msg.error {
+  background-color: #ee6e73;
+}
+
+.response-msg.success {
+  background-color: #009191;
 }
 
 /* END CUSTOM STYLES */

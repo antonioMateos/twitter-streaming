@@ -18,7 +18,8 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <!--Import materialize.css-->
     <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
-
+    <!--Import Fontawesome -->
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
     <!-- Custom CSS -->
     <link href="css/custom.css" rel="stylesheet">
 
@@ -41,7 +42,7 @@
         <div class="nav-wrapper container">
 
             <!-- HEADER MENU -->
-            <a id="logo-container" href="#" class="brand-logo">Twitter Stream</a>
+            <a id="logo-container" href="#" class="brand-logo center">Twitter Stream</a>
             <ul class="right hide-on-med-and-down">
                 <!--<li><a href="#">Navbar Link</a></li>-->
             </ul>
@@ -74,21 +75,28 @@
 
                 <div class="col s12">
 
-                    <div class="mtl">
-                        <input type="text" id="track-term" placeholder="Please, type the hashtag you wanna track" />
-                        <button id="start-btn" class="btn btn-primary right btn-start waves-effect waves-light">Start Streaming</button>
-                        <button id="stop-btn" class="btn btn-secondary right btn-stop waves-effect waves-light red">Stop Streaming</button>
-                        <div class="clearfix"></div>
+                    <div class="mts">
+                        <input type="text" id="track-term" class="term-input center" placeholder="Please, type the hashtag you wanna track" />
                     </div>
 
                 </div>
+
+                <div class="col s12 right">
+                    <button id="start-btn" class="btn btn-primary right btn-start waves-effect waves-light">Start Streaming</button>
+                    <button id="stop-btn" class="btn btn-secondary right btn-stop waves-effect waves-light red">Stop Streaming</button>
+                </div>
+
+                <div class="clearfix"></div>
 
             </div>
 
             <div class="row">
 
-                <div class="col s12">
-                    <h5 class="title">Streaming tweets that use the hashtag: <span id="hashtag"></span></h5>
+                <div class="col s8">
+                    <h5 class="title">Streaming tweets that use the hashtag&nbsp;<span id="hashtag" style="display:none;"></span></h5>
+                </div>
+                <div class="col s4 stats" style="display:none;">
+                    <p class="right"><span title="Tweets received"></span></p>
                 </div>
 
                 <div class="col s12 twitterStream">

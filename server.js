@@ -55,10 +55,8 @@ console.log('- - - - SOCKET IO');
 io.on('connection', function(socket){
 
   //START CONNECTION
-  var msg = 'Sockets ON';
-  socket.emit('connect',function(msg){
-    console.log(msg);
-  });
+  var msg = 'Server ON';
+  socket.emit('connect',msg);
 
   var hashtag;
   var clientStream; // TO DESTROY CONNECTION
@@ -66,7 +64,7 @@ io.on('connection', function(socket){
   //Hashtag from front
   socket.on('start',function(data){
 
-    hashtag = data;
+    hashtag = "#"+data;
     //console.log("#"+hashtag);
 
     //TWITTER STREAM API
