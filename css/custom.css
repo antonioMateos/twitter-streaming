@@ -290,6 +290,10 @@ a, a:hover, button, button:hover, .ease {
 /*COLORS*/
 /*END COLORS*/
 /* MATERIAL DESIGN RESET */
+input:not([type]):focus:not([readonly]), input[type=text]:not(.browser-default):focus:not([readonly]), input[type=password]:not(.browser-default):focus:not([readonly]), input[type=email]:not(.browser-default):focus:not([readonly]), input[type=url]:not(.browser-default):focus:not([readonly]), input[type=time]:not(.browser-default):focus:not([readonly]), input[type=date]:not(.browser-default):focus:not([readonly]), input[type=datetime]:not(.browser-default):focus:not([readonly]), input[type=datetime-local]:not(.browser-default):focus:not([readonly]), input[type=tel]:not(.browser-default):focus:not([readonly]), input[type=number]:not(.browser-default):focus:not([readonly]), input[type=search]:not(.browser-default):focus:not([readonly]), textarea.materialize-textarea:focus:not([readonly]) {
+  border-bottom-color: #1da1f2;
+}
+
 /* CUSTOM STYLES */
 .main-background {
   background: url("../images/bg-01.jpg") no-repeat right 60px fixed;
@@ -297,6 +301,10 @@ a, a:hover, button, button:hover, .ease {
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
+}
+
+.font-handw, nav a.brand-logo {
+  font-family: 'Permanent Marker', cursive;
 }
 
 .main {
@@ -309,13 +317,17 @@ body {
 }
 
 nav {
-  background: #006995;
+  background: #1da1f2;
+  box-shadow: none;
+}
+
+nav a, nav a.brand-logo {
+  text-shadow: none;
 }
 
 main {
   height: calc(100vh - 65px);
-  background-color: rgba(198, 198, 198, 0.5);
-  padding-top: 30px;
+  padding-top: 40px;
 }
 
 main .btn-start {
@@ -335,8 +347,7 @@ main .container {
   padding-right: .75rem;
   background-color: #fff;
   padding-bottom: 5px;
-  border-radius: 2px;
-  border: 1px solid #dadada;
+  border-radius: border;
 }
 
 main .title {
@@ -383,7 +394,7 @@ main .stats p span:before {
 }
 
 main .twitterStream {
-  height: calc(100vh - 330px);
+  height: calc(100vh - 385px);
   overflow: hidden;
   overflow-y: auto;
   padding-bottom: 0 !important;
@@ -450,7 +461,7 @@ main.streaming .btn-stop {
 }
 
 .response-msg.success {
-  background-color: #009191;
+  background-color: #00cece;
 }
 
 /* END CUSTOM STYLES */
